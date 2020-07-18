@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 Que 4</title>
+</head>
+<body>
+    <script>
+            var a = prompt('Enter first number');
+            var b = prompt('Enter second number');
+            var result;
+            var calculator = prompt('Enter the operater')
+            switch(calculator)
+            {
+            case '+' :
+                result = +a + +b;
+                break;
+            case '-' :
+                result = a - b;
+                break;
+            case '/' :
+                result = a / b;
+                break;
+            case '%' :
+                result = a % b;
+                break;
+            case '*':
+                result = a * b;
+                break;
+            }
+        console.log('Answer is '+ result);
+
+    </script>
+</body>
+</html>
