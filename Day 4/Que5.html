@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 Que 5</title>
+</head>
+<body>
+    <script>
+    function commission(){
+var amt = prompt('Enter the salary');
+var sum=0;
+
+switch (true) {
+case (amt>20000):{
+let val = Math.round((10/100) * amt);
+sum = sum + val;
+
+}
+case (amt > 10001 && amt <= 20000):{
+let v = Math.round((7/100) * amt);
+sum = sum + v;
+
+}
+case (amt > 5001 && amt <= 10000 ):{
+let a = Math.round((5/100) * amt);
+sum = sum + a;
+
+}
+case (amt <= 5000):{
+let l = Math.round((2/100) * amt);
+sum = sum + l;
+}
+default:
+console.log('Amount is '+amt+' Your Commission is '+sum+'.');
+break;
+}
+}
+commission();
+    </script>
+</body>
+</html>
