@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5 Que 2</title>
+</head>
+<body>
+    <script>
+        class User {
+            constructor(name,age,email)
+            {
+                this.name = name;
+                this.age = age;
+                this.email = email;  
+                this.coin = 0;
+                this.course = [];            
+            }
+            login()
+            {
+                console.log(`${this.name} has logged in`);
+                return this;
+            }
+            logout() 
+            {
+                console.log(`${this.name} has logged out`);
+                return this;
+            }
+        }
+        class moderator extends User
+        {
+            constructor(name,age,email,coin)
+            {
+                super(name,age,email);
+                this.coin++;             
+            }
+            addCoin() {
+                console.log(`${name}has`+ this.coin);
+            }
+        }
+        class Admin extends moderator
+        {
+            addcourse(User,course) 
+            {
+                User.course.push(course);
+                console.log(User);
+            }
+        }
+
+        let user1 = new User('Ajay',23,'ajay1@gmail.com')
+        let user2 = new User('Ram',34,'ram3@gmail.com')
+        let mod = new moderator('Eden',25,'eden2@gmail.com')
+        let admin = new Admin('Joel',31,'ijoel34@gmail.com')
+        admin.addcourse(user1,'Python');
+        admin.addcourse(user2,'Java');
+        let users = [user1,user2,mod,admin];
+
+    </script>
+</body>
+</html>
