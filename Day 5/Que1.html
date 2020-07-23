@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5 Que 1</title>
+</head>
+<body>
+    <script>
+        var arr = []; 
+        let NUMBER_OF_INPUTS = prompt('Enter the size of array');
+        if(NUMBER_OF_INPUTS<0)
+        {
+            alert('Enter only positive number');
+            while(NUMBER_OF_INPUTS<0)
+            {
+                NUMBER_OF_INPUTS = prompt('Enter the size of array');
+            }
+        }
+        for(i=0; i<NUMBER_OF_INPUTS; i++)
+        {
+            let user = prompt('Enter the Numbers');
+            arr.push(user);
+            if(user<0)
+            {
+                   alert('Enter only positive number');
+                   while(user<0)
+                   {
+                       user = prompt('Enter the number');
+                   }
+            }
+        }
+        let odd = arr.filter(el=>el%2==1);
+        console.log(arr);
+        console.log(`Odd numbers are ${odd}`);
+
+    </script>
+</body>
+</html>
