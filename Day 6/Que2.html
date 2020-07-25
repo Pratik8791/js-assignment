@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 6 Que 2</title>
+
+    <script>
+        function print(){
+        var num = Number(document.getElementById('multi').value);
+        for(i=0;i<=10;i++)
+        {
+            var val= document.getElementById('printnum');
+            val.innerHTML += (num * i) + "<br/>"
+        }
+    }
+
+    </script>
+</head>
+<body style="text-align: center;">
+    <h2>Multiplication</h2>
+    <p><label for="multi">Muliplication</label></br></p>
+    <p><input type="text" id="multi" name="multi"></p>
+    <p><input type="button" value="Multiply" onclick='print()'></p>
+    <p id="printnum"></p>
+</body>
+</html>
