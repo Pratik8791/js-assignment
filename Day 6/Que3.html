@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 6 Que 3</title>
+</head>
+<style>
+    .mystyle{
+        background-color: black;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;   
+    }
+</style>
+<body>
+    <label for="Username">Enter Your name</label>
+    <input type="text" id="uname" name="Username">
+    <input type="button" id="btn" value="Submit" onclick="welcome()">
+    <h4 id="time"></h4>
+    <button id="dark" onclick="changeclr()">Change Background</button>
+</body>
+<script>
+        var x = document.getElementById('uname');
+        function welcome(){
+            document.write("Welcome "+ x.value);
+        }
+
+        const Time = document.getElementById('time');
+        function clock(){
+            let date = new Date();
+            let time = date.toLocaleTimeString();
+            Time.innerText = time;
+        }
+        setInterval(clock,1000);
+
+// Toggle
+
+        function changeclr(){
+            var element = document.body;
+            element.classList.toggle("mystyle"); 
+        }
+</script>
+</html>
